@@ -40,6 +40,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
+ *
+ * test jenkins
  * Integration test of the Service and the Repository layer.
  * <p>
  * ClinicServiceSpringDataJpaTests subclasses benefit from the following services provided
