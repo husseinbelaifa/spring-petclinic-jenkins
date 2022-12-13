@@ -11,7 +11,7 @@ pipeline {
         stage("checkout"){
             steps {
 
-                git url: 'git@github.com:husseinbelaifa/spring-petclinic-jenkins.git', branch: 'main'
+                git url: 'git@github.com:husseinbelaifa/spring-petclinic-jenkins.git', branch: 'DEV'
 
 
             }
@@ -46,6 +46,8 @@ pipeline {
                 }
             }
         }
+
+
 
 
 
