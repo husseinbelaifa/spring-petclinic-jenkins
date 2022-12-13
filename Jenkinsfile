@@ -52,11 +52,6 @@ pipeline {
 
 
 
-
-
-
-
-
         stage('STAGING'){
 
            when {
