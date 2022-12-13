@@ -13,12 +13,16 @@ pipeline {
 
                 git url: 'git@github.com:husseinbelaifa/spring-petclinic-jenkins.git', branch: 'DEV'
 
-                git checkout DEV
+
+
+
 
 
             }
 
         }
+
+
 
 
 
