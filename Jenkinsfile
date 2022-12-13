@@ -3,7 +3,7 @@ pipeline {
 
      environment {
          branch = "${env.GIT_BRANCH.split("/")[1]}"
-         currentBuild= "${env.currentBuild.results}"
+
       }
 
 //    triggers {
