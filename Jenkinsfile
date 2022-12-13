@@ -20,7 +20,7 @@ pipeline {
 
                 echo "branch name is ${env.GIT_BRANCH.split("/")[1]}"
 
-                echo "currentBuild is ${currentBuild.result}"
+                echo "currentBuild is ${currentBuild.currentResult}"
 
 
 
