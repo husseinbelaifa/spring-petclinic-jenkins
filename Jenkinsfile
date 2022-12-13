@@ -23,28 +23,28 @@ pipeline {
 
 
 
-        stage('Build') {
-            steps {
-
-
-                sh "./mvnw clean package"
-
-                 echo "BRANCH_NAME: ${env.GIT_BRANCH.split("/")[1]}"
-
-                  echo "BRANCH_NAME: ${env.GIT_BRANCH}"
-            }
-
-
-
-            post {
-                // If Maven was able to run the tests, even if some of the test
-                // failed, record the test results and archive the jar file.
-                always {
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                    archiveArtifacts 'target/*.jar'
-                }
-            }
-        }
+//         stage('Build') {
+//             steps {
+//
+//
+//                 sh "./mvnw clean package"
+//
+//                  echo "BRANCH_NAME: ${env.GIT_BRANCH.split("/")[1]}"
+//
+//                   echo "BRANCH_NAME: ${env.GIT_BRANCH}"
+//             }
+//
+//
+//
+//             post {
+//                 // If Maven was able to run the tests, even if some of the test
+//                 // failed, record the test results and archive the jar file.
+//                 always {
+//                     junit '**/target/surefire-reports/TEST-*.xml'
+//                     archiveArtifacts 'target/*.jar'
+//                 }
+//             }
+//         }
 
 
 
