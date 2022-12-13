@@ -3,6 +3,7 @@ pipeline {
 
      environment {
          branch = "${env.GIT_BRANCH.split("/")[1]}"
+         currentBuild= "${env.currentBuild.results}"
       }
 
 //    triggers {
@@ -18,6 +19,8 @@ pipeline {
                 git url: 'git@github.com:husseinbelaifa/spring-petclinic-jenkins.git', branch: 'DEV'
 
                 echo "branch name is ${env.GIT_BRANCH.split("/")[1]}"
+
+                echo "currentBuild is ${currentBuild}"
 
 
 
@@ -51,16 +54,6 @@ pipeline {
 //                 }
 //             }
 //         }
-
-
-
-
-
-
-
-
-
-
 
 
 
