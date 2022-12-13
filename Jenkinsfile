@@ -1,10 +1,10 @@
 pipeline {
     agent any
 
-//      environment {
-//          branch = "${env.GIT_BRANCH.split("/")[1]}"
-//
-//       }
+     environment {
+         branch = "${env.GIT_BRANCH.split("/")[1]}"
+
+      }
 
 //    triggers {
 //      pollSCM '* * * * *'
@@ -75,7 +75,7 @@ pipeline {
                    when {
 
 
-                            branch 'main'
+                           expression { branch == 'main' }
                    }
                   steps {
                           echo 'DEPLOY FOR MASTER'
@@ -89,7 +89,7 @@ pipeline {
                    when {
 
 
-                          branch 'DEV'
+                         expression { branch == 'DEV' }
                    }
                   steps {
                           echo 'DEPLOY FOR DEV'
