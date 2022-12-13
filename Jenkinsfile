@@ -35,6 +35,8 @@ pipeline {
                   echo "BRANCH_NAME: ${env.GIT_BRANCH}"
             }
 
+
+
             post {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
@@ -43,6 +45,17 @@ pipeline {
                     archiveArtifacts 'target/*.jar'
                 }
             }
+        }
+
+        stage('STAGING'){
+
+           when {
+                  branch 'DEV'
+           }
+          steps {
+                  echo 'run this stage - ony if the branch = DEV branch'
+              }
+
         }
     }
 }
