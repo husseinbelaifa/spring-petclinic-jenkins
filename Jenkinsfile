@@ -27,7 +27,7 @@ pipeline {
             steps {
 
 
-                sh "./mvnw  package"
+                sh "./mvnw clean package"
 
                  echo "BRANCH_NAME: ${env.GIT_BRANCH.split("/")[1]}"
 
