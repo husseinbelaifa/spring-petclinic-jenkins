@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-   triggers {
-     pollSCM '* * * * *'
-   }
+//    triggers {
+//      pollSCM '* * * * *'
+//    }
 
 
     stages {
@@ -29,6 +29,10 @@ pipeline {
 
 
                 sh "./mvnw clean package"
+
+                 echo "BRANCH_NAME: ${env.GIT_BRANCH.split("/")[1]}"
+
+                  echo "BRANCH_NAME: ${env.GIT_BRANCH}"
             }
 
             post {
