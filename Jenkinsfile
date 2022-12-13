@@ -67,7 +67,9 @@ pipeline {
         stage('STAGING'){
 
            when {
-                  branch 'DEV'
+
+
+                  expression { branch == 'DEV' }
            }
           steps {
                   echo 'run this stage - ony if the branch = DEV branch'
