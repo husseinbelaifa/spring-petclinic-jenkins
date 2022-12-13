@@ -2,7 +2,7 @@ pipeline {
     agent any
 
      environment {
-         branch = "${GIT_BRANCH.split("/")[1]}"
+         branch = "${env.GIT_BRANCH.split("/")[1]}"
       }
 
 //    triggers {
@@ -16,6 +16,8 @@ pipeline {
             steps {
 
                 git url: 'git@github.com:husseinbelaifa/spring-petclinic-jenkins.git', branch: 'DEV'
+
+                echo "branch name is ${env.GIT_BRANCH.split("/")[1]}"
 
 
 
