@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+     environment {
+         branch = "${GIT_BRANCH.split("/")[1]}"
+      }
+
 //    triggers {
 //      pollSCM '* * * * *'
 //    }
