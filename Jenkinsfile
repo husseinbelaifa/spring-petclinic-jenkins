@@ -68,5 +68,35 @@ pipeline {
               }
 
         }
+
+
+         stage('DEPLOY_MASTER'){
+
+                   when {
+
+
+                            branch 'main'
+                   }
+                  steps {
+                          echo 'DEPLOY FOR MASTER'
+                      }
+
+        }
+
+
+         stage('DEPLOY_DEV'){
+
+                   when {
+
+
+                          branch 'DEV'
+                   }
+                  steps {
+                          echo 'DEPLOY FOR DEV'
+                      }
+
+         }
+
+
     }
 }
